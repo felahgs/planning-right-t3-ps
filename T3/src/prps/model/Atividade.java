@@ -1,4 +1,4 @@
-package model;
+package prps.model;
 
 public class Atividade {
 	private String descricao;

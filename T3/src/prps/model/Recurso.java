@@ -1,4 +1,4 @@
-package model;
+package prps.model;
 
 public class Recurso {
 	private int custo;
