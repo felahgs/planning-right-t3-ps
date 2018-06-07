@@ -2,12 +2,14 @@ package prps.model;
 
 import java.util.UUID;
 
+import prps.interfaces.InterfaceDeTela;
+
 /*
  * Cada desenvolvedor tem uma capacidade de produção média dada em atividade/dia e um salário de
  * acordo com sua capacidade. Cada desenvolvedor realiza um unico papel no projeto 
  * (analista, projetista, BD, programador ou testador)
  */
-public class Desenvolvedor {
+public class Desenvolvedor implements InterfaceDeTela{
 	private UUID id;
 	private int salario; //salário de acordo com sua capacidade
 	private int capacidade; // capacidade de produção média dada em atividade/dia
@@ -46,5 +48,12 @@ public class Desenvolvedor {
 	}
 	public void setAlocado(boolean alocado) {
 		this.alocado = alocado;
+	}
+
+	@Override
+	public void imprime() {
+		System.out.println("Desenvolvedor: \"" + this.getPapel() 
+       	+ "\" Custo/Hora: \"" + this.getSalario() + "\" Capacidade de produção: \"" 
+    		   + this.getCapacidade() + " atividades por dia\"");// TODO Auto-generated method stu
 	}
 }

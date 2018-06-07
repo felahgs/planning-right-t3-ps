@@ -2,10 +2,11 @@ package prps.list;
 
 import java.util.ArrayList;
 
+import prps.interfaces.InterfaceDeTela;
 import prps.model.Desenvolvedor;
 
-public class Desenvolvedores {
-	private ArrayList<Desenvolvedor> desenvolvedores;
+public class Desenvolvedores implements InterfaceDeTela {
+	private ArrayList<Desenvolvedor> desenvolvedores = new ArrayList<Desenvolvedor>();
 	
 	public Desenvolvedores () {
 		this.adicionaDesenvolvedor("Programador", 24, 2);
@@ -23,5 +24,17 @@ public class Desenvolvedores {
 		devTest.setCapacidade(capacidade);
 		
 		this.desenvolvedores.add(devTest);
+	}
+	
+	public ArrayList<Desenvolvedor> listaDesenvolvedores() {
+		return this.desenvolvedores;
+	}
+
+	@Override
+	public void imprime() {
+		for(Desenvolvedor desenvolvedor: desenvolvedores) {
+			desenvolvedor.imprime();
+		}
+		
 	}
 }
