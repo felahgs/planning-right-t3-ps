@@ -2,7 +2,7 @@ package prps.tests;
 
 import java.util.ArrayList;
 
-import prps.list.Desenvolvedores;
+import prps.list.ListaDeDesenvolvedores;
 import prps.model.Desenvolvedor;
 
 public class TestDesenvolvedor {
@@ -11,7 +11,7 @@ public class TestDesenvolvedor {
 		// TODO Auto-generated method stub
 		
 		Desenvolvedor devTest = new Desenvolvedor();
-		Desenvolvedores devList = new Desenvolvedores();
+		ListaDeDesenvolvedores devList = new ListaDeDesenvolvedores();
 		ArrayList<Desenvolvedor> equipe = new ArrayList<Desenvolvedor>();
 		
 		devTest.setAlocado(false);
