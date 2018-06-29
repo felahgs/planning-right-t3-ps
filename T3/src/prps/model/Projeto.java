@@ -11,27 +11,39 @@ public class Projeto {
 	private ArrayList<Desenvolvedor> desenvolvedores = new ArrayList<Desenvolvedor>();
 
 	
-	
-	public void addEquipe() {
-		// TODO: Implement method
-	}
-	
-	public void addRecurso() {
-		// TODO: Implement method
-	}
-	
-	public void removeRecurso() {
-		// TODO: Implement Method
-	}
-	
-	public void listaRecurso() {
-		// TODO: Implement Method
 
+	
+	public void imprimeRecurso() {
+		System.out.println("Recursos do Projeto");
+		int count = 1;
+		for(Recurso rec: recursos) {
+			System.out.print(count + ") ");
+			rec.imprime();
+			
+			count++;
+		}
 	}
 	
-	public void listaEquipe() {
-		// TODO: Implement Method
-
+	public void imprimeAtividades() {
+		System.out.println("Atividades do Projeto");
+		int count = 1;
+		for(Atividade atv: atividades) {
+			System.out.print(count + ") ");
+			atv.imprime();
+			
+			count++;
+		}
+	}
+	
+	public void imprimeEquipe() {
+		System.out.println("Equipe do Projeto");
+		int count = 1;
+		for(Desenvolvedor dev: desenvolvedores) {
+			System.out.print(count + ") ");
+			dev.imprime();
+			
+			count++;
+		}
 	}
 	
 	public int getOrcamento() {

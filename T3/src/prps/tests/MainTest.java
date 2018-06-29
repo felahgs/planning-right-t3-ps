@@ -21,10 +21,10 @@ public class MainTest {
 		ListaDeDesenvolvedores desenvolvedores = new ListaDeDesenvolvedores();
 		ListaDeRecursos recursos = new ListaDeRecursos();
 		
-		atividades.adiciona(new Atividade ("Codificação", 4));
-		atividades.adiciona(new Atividade ("Criação de banco", 5));
+		atividades.adiciona(new Atividade ("Codificaï¿½ï¿½o", 4));
+		atividades.adiciona(new Atividade ("Criaï¿½ï¿½o de banco", 5));
 		atividades.adiciona(new Atividade ("Teste 1", 1));
-		atividades.adiciona(new Atividade ("Codificação", 4));
+		atividades.adiciona(new Atividade ("Codificaï¿½ï¿½o", 4));
 		
 		desenvolvedores.adiciona(new Desenvolvedor ("Programador", 24, 2));
 		desenvolvedores.adiciona(new Desenvolvedor ("BDA", 32, 1));        
@@ -50,9 +50,17 @@ public class MainTest {
 		equipeController.criarEquipe(proj, desenvolvedores);
 		recursosController.alocaRecurso(proj, recursos);
 		
-		recursosController.desalocaRecurso(proj, recursos);
-		System.out.println("Os recursos foram desalocados. Recursos disponíveis:");
-		recursos.imprime();
+//		recursosController.desalocaRecurso(proj, recursos);
+//		System.out.println("Os recursos foram desalocados. Recursos disponï¿½veis:");
+//		recursos.imprime();
+		
+		System.out.println("\n");
+		
+		System.out.println("Cronograma " + proj.getCronograma() + " dias");
+		System.out.println("Orcamento de BCZ$:" + proj.getOrcamento());
+		proj.imprimeAtividades();
+		proj.imprimeEquipe();
+		proj.imprimeRecurso();
 	}
 
 }
