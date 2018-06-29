@@ -10,7 +10,7 @@ public class TestDesenvolvedor {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Desenvolvedor devTest = new Desenvolvedor();
+		Desenvolvedor devTest = new Desenvolvedor(null, 0, 0);
 		ListaDeDesenvolvedores devList = new ListaDeDesenvolvedores();
 		ArrayList<Desenvolvedor> equipe = new ArrayList<Desenvolvedor>();
 		
@@ -25,7 +25,7 @@ public class TestDesenvolvedor {
 		devList.imprime();
 		
 		System.out.println("\nTestando \"Desenvolvedores.listaDesenvolvedores()\"");
-	    equipe = devList.listaDesenvolvedores();
+	    equipe = devList.getDesenvolvedores();
 		for(Desenvolvedor desenvolvedor: equipe) {
 			desenvolvedor.imprime();
 		}

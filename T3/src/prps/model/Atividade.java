@@ -6,6 +6,11 @@ public class Atividade implements InterfaceDeTela{
 	private String descricao;
 	private int duracao;
 	
+	public Atividade(String string, int i) {
+		this.descricao = string;
+		this.duracao = i;
+	}
+
 	public String getDescricao() {
 		return descricao;
 	}

@@ -5,7 +5,7 @@ import prps.model.Recurso;
 
 public class TestRecurso {
 	public static void main(String[] args) {
-		Recurso recurso = new Recurso();
+		Recurso recurso = new Recurso(null, 0);
 		ListaDeRecursos recList = new ListaDeRecursos();
 		recurso.setCusto(3000);
 		recurso.setTipo("Servidor");

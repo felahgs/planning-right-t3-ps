@@ -9,20 +9,13 @@ import prps.model.Atividade;
 public class ListaDeAtividades implements InterfaceDeTela, InterfaceDeListas {
 	private ArrayList<Atividade> atividades = new ArrayList<Atividade>();
 	
-	public ListaDeAtividades () {
-		this.adiciona("Codificação", 4);
-		this.adiciona("Criação de banco", 5);
-		this.adiciona("Teste 1", 1);
 
+	public void adiciona(Atividade atividade) {
+		this.atividades.add(atividade);
 	}
 	
-	public void adiciona(String descricao, int duracao) {
-		Atividade atvTest = new Atividade();
-		atvTest.setDescricao(descricao);
-		atvTest.setDuracao(duracao);
-
-		
-		this.atividades.add(atvTest);
+	public void remove(int id) {
+		this.atividades.remove(id);
 	}
 	
 	public ArrayList<Atividade> getAtividades() {

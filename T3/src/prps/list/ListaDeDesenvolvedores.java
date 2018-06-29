@@ -4,37 +4,35 @@ import java.util.ArrayList;
 
 import prps.interfaces.InterfaceDeListas;
 import prps.interfaces.InterfaceDeTela;
+import prps.model.Atividade;
 import prps.model.Desenvolvedor;
 
 public class ListaDeDesenvolvedores implements InterfaceDeTela, InterfaceDeListas {
 	private ArrayList<Desenvolvedor> desenvolvedores = new ArrayList<Desenvolvedor>();
 	
-	public ListaDeDesenvolvedores () {
-		this.adiciona("Programador", 24, 2);
-		this.adiciona("BDA", 32, 1);
-		this.adiciona("Testador", 19, 5);
-		this.adiciona("Projetista", 29, 3);
-		this.adiciona("Analista", 26, 2);
+	
+	public void adiciona(Desenvolvedor desenvolvedor) {
+		this.desenvolvedores.add(desenvolvedor);
 	}
 	
-	public void adiciona(String papel, int salario, int capacidade) {
-		Desenvolvedor devTest = new Desenvolvedor();
-		devTest.setAlocado(false);
-		devTest.setPapel(papel);
-		devTest.setSalario(salario);
-		devTest.setCapacidade(capacidade);
-		
-		this.desenvolvedores.add(devTest);
+	public void remove(int id) {
+		this.desenvolvedores.remove(id);
 	}
 	
-	public ArrayList<Desenvolvedor> listaDesenvolvedores() {
+	public ArrayList<Desenvolvedor> getDesenvolvedores() {
 		return this.desenvolvedores;
 	}
 
 	@Override
 	public void imprime() {
+		
+		int count = 1;
 		for(Desenvolvedor desenvolvedor: desenvolvedores) {
+			System.out.print(count + ") ");
+
 			desenvolvedor.imprime();
+			count++;
+
 		}
 		
 	}

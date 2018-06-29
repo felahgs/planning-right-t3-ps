@@ -16,10 +16,15 @@ public class Desenvolvedor implements InterfaceDeTela{
 	private boolean alocado;
 	private String papel; //analista, projetisa, bda, programador, testador
 	
-	public Desenvolvedor() {
+	public Desenvolvedor(String string, int i, int j) {
 		this.id = UUID.randomUUID();
+		this.papel = string;
+		this.salario = i; 
+		this.capacidade = j;
 	}
 	
+
+
 	public String getPapel() {
 		return papel;
 	}

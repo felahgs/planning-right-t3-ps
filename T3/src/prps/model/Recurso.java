@@ -6,6 +6,11 @@ public class Recurso implements InterfaceDeTela{
 	private int custo;
 	private String tipo;
 	
+	public Recurso (String str, int i) {
+		this.custo = i;
+		this.tipo = str;
+	}
+	
 	public int getCusto() {
 		return custo;
 	}
